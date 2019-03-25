@@ -8,6 +8,55 @@
 
 #import <Foundation/Foundation.h>
 
+//Calculator
+
+@interface Calculator : NSObject {
+    double accumulator;
+}
+
+-(void) setAccomulator: (double) value;
+-(void) clear;
+-(double) accumulator;
+
+-(void) add: (double) value;
+-(void) substract: (double) value;
+-(void) division: (double) value;
+-(void) multiplication: (double) value;
+
+@end
+
+@implementation Calculator
+
+- (void)setAccomulator:(double)value {
+    accumulator = value;
+}
+
+-(void) clear {
+    accumulator = 0.0;
+}
+
+-(double) accumulator {
+    return accumulator;
+}
+
+- (void)add:(double)value {
+    accumulator += value;
+}
+
+- (void)substract:(double)value {
+    accumulator -= value;
+}
+
+-(void)multiplication:(double)value {
+    accumulator *= value;
+}
+
+- (void)division:(double)value {
+    accumulator /= value;
+}
+
+@end
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         int integerVar = 100;
@@ -41,6 +90,26 @@ int main(int argc, const char * argv[]) {
         f2 = (float) i2 / 100;
         NSLog(@"%f", f2 ); // -1.5 if even one of part is float or double result will be with point
         
+        //op=
+        int g = 25;
+        int v = 2;
+        int m = 3;
+        
+        int q = g/= v + m; // q is equal 5
+        NSLog(@"q is equal %i", q);
+        
+        //Use calculator
+        Calculator *calculator = [[Calculator alloc] init];
+        [calculator clear];
+        [calculator add:0.5];
+        [calculator multiplication:100.0];
+        double result = [calculator accumulator];
+        NSLog(@"result is %f", result); // 50
+        
+        [calculator release];
+        
     }
     return 0;
 }
+
+

@@ -52,6 +52,11 @@
         return numerator;
     }
     
+    -(void)dealloc {
+        [super dealloc];
+        printf("Fraction dealocated");
+    }
+    
 @end
 
 
@@ -74,6 +79,9 @@
 
 //MARK: - application execute
 int main(int argc, const char * argv[]) {
+
+Fraction *myFraction = [[Fraction alloc] init]; // is equal [Fraction new]
+
     @autoreleasepool {
 
         
@@ -81,7 +89,7 @@ int main(int argc, const char * argv[]) {
 //        Fraction *myFraction;
 //        myFraction = [Fraction alloc];
 //        myFraction = [myFraction init];
-        Fraction *myFraction = [[Fraction alloc] init]; // is equal [Fraction new]
+//        Fraction *myFraction = [[Fraction alloc] init]; // is equal [Fraction new]
         
         
         [myFraction setNumerator: 14];
@@ -94,8 +102,15 @@ int main(int argc, const char * argv[]) {
         //ARC disabled
         [myFraction release];
         
+        //printf(@"Step 0 %lu", (unsigned long)[myFraction retainCount]);
+        
+        myFraction = NULL;
+        
         [myFraction printThis:189];
     }
+    
+    //printf(@"Step 1 %lu", (unsigned long)[myFraction retainCount]);
+    
     return 0;
 }
 
