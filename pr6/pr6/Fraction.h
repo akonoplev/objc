@@ -19,8 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property int numerator;
 
 -(void)print;
+-(void) setTo: (int) n over: (int) d;
+-(void) setTo: (int) n : (int) d;
 -(double)convertToNum;
-
+-(void) callClass;
+-(Fraction *) add: (Fraction *) f;
 @end
 
 NS_ASSUME_NONNULL_END
