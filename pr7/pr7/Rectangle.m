@@ -26,11 +26,23 @@
 }
 
 -(void)setOrigin:(XYPoint *)pt {
+    //release memory before set new value origin
+    if(origin) {
+        //[origin release]; // ARC is off
+    }
+    
     origin = XYPoint.new;
     [origin setX:pt.x andY:pt.y];
+
 }
 
 -(XYPoint*)origin {
     return origin;
+}
+
+-(void)dealloc {
+    //[super realease];
+    // [origin realese]; if ARC turned off
+    //[super dealloc];
 }
 @end

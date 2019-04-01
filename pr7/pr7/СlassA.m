@@ -10,4 +10,8 @@
 
 @implementation ClassA
 
+-(void) intVar {
+    x = 100;
+}
+
 @end

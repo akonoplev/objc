@@ -10,4 +10,13 @@
 
 @implementation ClassB
 
+-(void)intVar {
+    x = 200;
+    y = 300;
+}
+
+-(void)printInt {
+    NSLog(@"class B int is %i", x);
+    NSLog(@"class B int y is %i", y);
+}
 @end

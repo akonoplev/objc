@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Rectangle.h"
 #import "XYPoint.h"
+#import "ClassB.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -26,6 +27,15 @@ int main(int argc, const char * argv[]) {
         [myOrigin setX:50 andY:100];
         NSLog(@"value change =========================");
         NSLog(@"my rect has size w %i and h %i, and start point x %i and y %i",myRect.width, myRect.height, myRect.origin.x, myRect.origin.y);
+        
+        
+        NSLog(@"=======================================");
+        
+        ClassB *objB = [[ClassB alloc] init];
+        
+        [objB printInt];
+        [objB intVar];
+        [objB printInt];
         
     }
     return 0;

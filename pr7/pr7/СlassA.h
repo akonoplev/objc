@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ClassA : NSObject
+@interface ClassA : NSObject {
+    int x;
+}
+
+-(void)intVar;
 
 @end
 
