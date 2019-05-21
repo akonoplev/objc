@@ -252,7 +252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63MJY5QF87;
+				DEVELOPMENT_TEAM = 8X8NDN458D;
 				PRODUCT_NAME = "-fno-objc-arc";
 			};
 			name = Debug;
@@ -261,7 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63MJY5QF87;
+				DEVELOPMENT_TEAM = 8X8NDN458D;
 				PRODUCT_NAME = "-fno-objc-arc";
 			};
 			name = Release;

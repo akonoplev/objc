@@ -8,7 +8,7 @@
 
 #import "Fraction.h"
 
-static int *callClass;
+static int callClass;
 
 @implementation Fraction
 
@@ -55,6 +55,10 @@ static NSString *url = @"something";
     ++callCount;
     ++callClass;
     NSLog(@"call count %i", callCount);
+}
+
+-(int) count {
+    return callClass;
 }
 
 @end

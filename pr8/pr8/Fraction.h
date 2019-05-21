@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(double)convertToNum;
 -(void) callClass;
 -(Fraction *) add: (Fraction *) f;
+-(int) count;
 @end
 
 NS_ASSUME_NONNULL_END

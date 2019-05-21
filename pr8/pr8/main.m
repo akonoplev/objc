@@ -73,7 +73,57 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Caught %@%@", [exception name], [exception reason]);
         }
         NSLog(@"Execution continiues");
+        
+        
+        [f callClass];
+        [f callClass];
+        
+        NSLog(@"Count calls is %i", [f count]);
+        
         [f release];
+        
+        //Enums
+        enum months {january = 1, february, march, april, may, june, july, august, september, october, november, december };
+        
+        enum months aMonth;
+        int days;
+        
+        NSLog(@"enter your month`s number: ");
+        scanf("%i", &aMonth);
+        
+        switch (aMonth) {
+            case january:
+            case march:
+            case may:
+            case july:
+            case august:
+            case october:
+            case december:
+                days = 31;
+                break;
+            case april:
+            case june:
+            case september:
+            case november:
+                days = 30;
+                break;
+            case february:
+                days = 28;
+                break;
+            default:
+                NSLog(@"Bad month number");
+                days = 0;
+                break;
+        }
+        
+        if (days != 0) {
+            NSLog(@"Number of days is %i", days);
+        }
+        
+        if (aMonth == february) {
+            NSLog(@"or 29 :))");
+        }
+        
     }
     return 0;
 }
